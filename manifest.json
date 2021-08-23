@@ -1,0 +1,38 @@
+{
+  "browser_action": {
+    "browser_style": true,
+    "default_title": "Click for comfy",
+    "default_icon": {
+      "16": "icons/off.ico"
+    }
+  },
+
+  "description": "Adds features to 4chan to make it more comfy.",
+  "manifest_version": 2,
+  "name": "comfychan",
+  "version": "1.0.2",
+  "icons": {
+    "16": "icons/on.ico"
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://boards.4chan.org/*", "https://boards.4channel.org/*"],
+      "css": ["content_scripts/content.css"],
+      "js": ["content_scripts/content.js"],
+      "all_frames": true
+    }
+  ],
+
+  "permissions": [
+    "https://boards.4chan.org/*",
+    "https://boards.4channel.org/*",
+    "activeTab",
+    "tabs",
+    "storage"
+  ]
+}

@@ -1,0 +1,45 @@
+.postContainer > .postContainer {
+    margin-left: 40px;
+}
+
+.post:first-child::after {
+    clear: both;
+    content: " ";
+    display: block;
+}
+
+body.comfyChan {
+    font-family: 'courier new';
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+body.comfyChan.comfyThread {
+    padding-right: 60%;
+}
+
+body.comfyChan #comfyFrame {
+    display: none;
+    border: none;
+    border-left: 5px red solid;
+    position: fixed;
+    width: 50%;
+    right: 0;
+}
+
+body.comfyChan .comfyLoad {
+    border-radius: 30px;
+    font-family: 'courier new';
+    color: #ffffff;
+    font-size: 17px;
+    background: #b80b0b;
+    padding: 5px 10px 5px 10px;
+    border: solid #945c5c 2px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+body.comfyChan .comfyLoad:hover {
+    text-decoration: none;
+    background: #0bb80b;
+}
